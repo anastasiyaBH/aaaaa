@@ -1,5 +1,5 @@
 .main {
-  background: url(./img/gradient.png);
+  background: url(../assets/img/gradient.png);
   background-position: center 118%;
   background-repeat: no-repeat;
   margin: 0 auto;
@@ -25,7 +25,7 @@ strong {
 
 .title-section {
   width: 100%;
-  background: url(./img/background.jpg);
+  background: url(../assets/img/background.jpg);
   background-position: center;
   background-repeat: no-repeat;
   padding: 137px 0 200px 0;
@@ -76,7 +76,7 @@ strong {
   display: flex;
   justify-content: center;
   margin: 75px auto;
-  background-image: url(./img/shad.png);
+  background-image: url(../assets/img/shad.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -262,7 +262,7 @@ strong {
 }
 
 .download-block::before {
-  content: url(./img/computer.png);
+  content: url(../assets/img/computer.png);
   position: absolute;
   bottom: -174px;
   right: -423px;

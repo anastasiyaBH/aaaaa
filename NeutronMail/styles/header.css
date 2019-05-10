@@ -1,21 +1,21 @@
 @font-face {
   font-family: "Titillium Web";
-  src: url("./fonts/titilliumweb.ttf");
+  src: url("../assets/fonts/titilliumweb.ttf");
 }
 
 @font-face {
   font-family: "TitilliumWeb-Bold";
-  src: url("./fonts/titilliumwebbold.ttf");
+  src: url("../assets/fonts/titilliumwebbold.ttf");
 }
 
 @font-face {
   font-family: "TitilliumWeb-light";
-  src: url("./fonts/titilliumweblight.ttf");
+  src: url("../assets/fonts/titilliumweblight.ttf");
 }
 
 @font-face {
   font-family: "Malaga-RegItalic";
-  src: url("./fonts/Malaga.otf");
+  src: url("../assets/fonts/Malaga.otf");
 }
 
 .body {
