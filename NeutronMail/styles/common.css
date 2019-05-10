@@ -1,3 +1,117 @@
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../assets/fonts/titilliumweb.ttf");
+}
+
+@font-face {
+  font-family: "TitilliumWeb-Bold";
+  src: url("../assets/fonts/titilliumwebbold.ttf");
+}
+
+@font-face {
+  font-family: "TitilliumWeb-light";
+  src: url("../assets/fonts/titilliumweblight.ttf");
+}
+
+@font-face {
+  font-family: "Malaga-RegItalic";
+  src: url("../assets/fonts/Malaga.otf");
+}
+ 
+/*******************************header*********************************/
+.body {
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  margin: 0 auto;
+  padding: 75px 0 0 0;
+}
+
+.header-line {
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 15px auto;
+}
+
+.logo {
+  margin: auto 0;
+}
+
+.navigation-registration-block {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.autorization-registration-block {
+  margin-left: 76px;
+}
+
+.navigation, .languages__line, .navigation__line {
+  margin: auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation__line--item {
+  padding-left: 28px;
+}
+
+.languages__line--item {
+  padding-right: 11px;
+}
+
+.languages__line--item:not(:last-of-type)::after {
+  padding-left: 11px;
+  content: "/";
+}
+
+.navigation__line--item-link {
+  font-family: 'Titillium Web';
+  font-size: 16px;
+  color: #454545;
+  text-align: left;
+}
+
+.languages__line--item-link {
+  font-family: 'Titillium Web';
+  font-size: 14px;
+  color: #959595;
+  text-align: left;
+}
+
+.languages__line--item-link:hover, .navigation__line--item-link:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.autorization-link {
+  color: rgba(69, 69, 69, 255);
+  text-align: left;
+}
+
+.registration-button {
+  width: 93px;
+  height: 43px;
+  margin-left: 23px;
+  border-radius: 80px;
+  color: #fff;
+  text-align: center;
+}
+
+.autorization-link, .registration-button {
+  font-family: "TitilliumWeb-Bold";
+  font-size: 16px;
+}
+
+.gradient {
+  background: linear-gradient(150deg, #582c7e, #6272c8);
+  box-shadow: 0 8px 18px #6272c8;
+  border: 0;
+}
+
 .main {
   background: url(../assets/img/gradient.png);
   background-position: center 118%;
@@ -350,137 +464,124 @@ strong {
   box-shadow: 0 8px 18px #888cb2;
 }
 
-@media (min-width: 1200px) {
-  .column-description:first-of-type::after {
-    content: "";
-    height: 205px;
-    border: 1px solid #b9b9b9;
-    position: absolute;
-    bottom: 107px;
-    left: 459px;
-  }
-  .column-description:last-of-type::after {
-    content: "";
-    width: 190px;
-    border: 1px solid #b9b9b9;
-    position: absolute;
-    bottom: 183px;
-    left: 496px;
-  }
-  .elips::before {
-    content: "";
-    height: 433px;
-    border: 1px solid #b9b9b9;
-    position: absolute;
-    bottom: 61px;
-    left: 173px;
-  }
-  .elips::after {
-    content: "";
-    width: 967px;
-    border: 1px solid #b9b9b9;
-    position: absolute;
-    bottom: 30px;
-    right: 333px;
-  }
-  .download-block::after {
-    content: "";
-    width: 1400px;
-    border: 1px solid #b9b9b9;
-    position: absolute;
-    bottom: -160px;
-    left: -218px;
-    z-index: -2;
-  }
+
+/*****************************************footer***********************************/
+.footer {
+  margin: 0 auto;
+  padding-top: 62px;
 }
 
-@media (min-width: 1200px) and (max-width: 1400px) {
-  .security-section__line {
-    width: 1200px;
-  }
-
+.labels-block {
+  margin: 0 auto;
+  width: 972px;
+  position: relative;
 }
 
-@media (min-width: 800px) and (max-width: 1200px) {
-  .security-section__line {
-    width: 100%;
-    flex-wrap: wrap;
-  }
-  .column-description {
-    padding: 20px 25px;
-  }
-
-  .blog-section {
-    margin-bottom: 100px;
-  }
-
-  .labels-line {
-    display: none;
-  }
-  .blog-section h3 {
-    left: 0;
-    text-align: center;
-  }
-  .elips {
-    left: 0;
-  }
-  .download-block::before {
-    display: none;
-  }
-  .quote-block {
-    width: 50%;
-  }
-  .quote-block img {
-    display: none;
-  }
-  .quote-block p {
-    width: 100%;
-  }
-  .download-block {
-    width: 50%;
-    right: 0px;
-  }
+.labels-block h4 {
+  font-family: "TitilliumWeb-Regular";
+  font-size: 14px;
+  color: rgba(122, 122, 122, 255);
+  text-align: right;
 }
 
-@media (min-width: 540px) and (max-width: 800px) {
-  .security-section__line {
-    width: 100%;
-    flex-wrap: wrap;
-  }
-  .column-description {
-    width: 80%;
-    padding: 20px 25px;
-  }
+.labels-block .labels-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 4%;
+  margin-top: 30px;
+}
 
-  .blog-section {
-    margin-bottom: 100px;
-  }
+.last-block {
+  margin: 0 auto;
+  width: 1208px;
+  position: relative;
+  right: 96px;
+  height: 157px;
+  padding-top: 167px;
+}
 
+.informatrion-block {
+  display: flex;
+  padding: 0 34px 0 20px;
+  position: relative;
+}
 
-  .labels-line {
-    display: none;
-  }
-  .blog-section h3 {
-    left: 0;
-    text-align: center;
-  }
-  .elips {
-    left: 0;
-  }
-  .download-block::before {
-    display: none;
-  }
-  .quote-block {
-    width: 70%;
-  }
-  .quote-block img {
-    display: none;
-  }
-  .quote-block p {
-    width: 100%;
-  }
-  .download-block {
-    width: 70%;
-    right: 0;
-  }
+.contact-informatrion-block {
+  flex-basis: 40%;
+  position: relative;
+}
+
+.footer-column {
+  flex-basis: 20%;
+  text-align: right;
+}
+
+.contact-informatrion-block__link {
+  font-family: "TitilliumWeb-Bold";
+  font-size: 14px;
+  color: rgba(92, 92, 92, 255);
+  font-weight: bold;
+}
+
+.footer-column h5 {
+  font-family: "TitilliumWeb-Bold";
+  font-size: 18px;
+  color: rgba(92, 92, 92, 255);
+  text-align: right;
+  margin-bottom: 30px;
+}
+
+.footer-column__list {
+  list-style-type: square;
+  list-style-position: inside;
+  direction: rtl;
+}
+
+.contact-informatrion-block p, .footer-column__link {
+  font-family: "TitilliumWeb-Regular";
+  font-size: 14px;
+  color: #5c5c5c;
+  line-height: 23px;
+}
+
+.contact-informatrion-block p:last-of-type {
+  margin-top: 20px;
+}
+
+.blog-list {
+  width: 31%;
+  padding-top: 75px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog-list__item {
+  padding-right: 11px;
+}
+
+.blog-list__item:not(:last-of-type)::after {
+  padding-left: 11px;
+  content: "/";
+}
+
+.blog-list__link {
+  font-family: 'Titillium Web';
+  font-size: 12px;
+  color: #5c5c5c;
+  text-decoration: underline;
+  text-align: left;
+}
+
+.blog-list__link:hover {
+  font-weight: bold;
+}
+
+.rights-title {
+  padding-top: 18px;
+  padding-bottom: 37px;
+  font-family: "TitilliumWeb";
+  font-size: 12px;
+  color: #5c5c5c;
+  font-weight: bold;
 }

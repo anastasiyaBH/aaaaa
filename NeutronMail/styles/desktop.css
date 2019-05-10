@@ -1,0 +1,137 @@
+@media (min-width: 1200px) {
+  .column-description:first-of-type::after {
+    content: "";
+    height: 205px;
+    border: 1px solid #b9b9b9;
+    position: absolute;
+    bottom: 107px;
+    left: 459px;
+  }
+  .column-description:last-of-type::after {
+    content: "";
+    width: 190px;
+    border: 1px solid #b9b9b9;
+    position: absolute;
+    bottom: 183px;
+    left: 496px;
+  }
+  .elips::before {
+    content: "";
+    height: 433px;
+    border: 1px solid #b9b9b9;
+    position: absolute;
+    bottom: 61px;
+    left: 173px;
+  }
+  .elips::after {
+    content: "";
+    width: 967px;
+    border: 1px solid #b9b9b9;
+    position: absolute;
+    bottom: 30px;
+    right: 333px;
+  }
+  .download-block::after {
+    content: "";
+    width: 1400px;
+    border: 1px solid #b9b9b9;
+    position: absolute;
+    bottom: -160px;
+    left: -218px;
+    z-index: -2;
+  }
+
+  .labels-block::before {
+    content: "";
+    width: 1397px;
+    border: 1px solid #b9b9b9;
+    position: absolute;
+    top: -22px;
+    right: -14px;
+  }
+  
+  .labels-block::after {
+    content: "";
+    height: 439px;
+    border: 1px solid #b9b9b9;
+    position: absolute;
+    top: -22px;
+    right: -15px;
+  }
+
+  .footer-column:last-of-type::before {
+    content: "";
+    height: 314px;
+    border: 1px solid #b9b9b9;
+    position: absolute;
+    top: -1px;
+    left: 744px;
+  }
+
+  .last-block::before {
+    content: "";
+    height: 131px;
+    border: 1px solid #b9b9b9;
+    position: absolute;
+    bottom: 23px;
+    left: -1px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .header-line {
+    width: 1100px;
+  }
+
+  .security-section__line {
+    width: 1200px;
+  }
+
+  .last-block {
+    width: 1000px;
+  }
+  .footer-column:last-of-type::before {
+    display: none;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+  .security-section__line {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .column-description {
+    padding: 20px 25px;
+  }
+
+  .blog-section {
+    margin-bottom: 100px;
+  }
+
+  .labels-line {
+    display: none;
+  }
+  .blog-section h3 {
+    left: 0;
+    text-align: center;
+  }
+  .elips {
+    left: 0;
+  }
+  .download-block::before {
+    display: none;
+  }
+  .quote-block {
+    width: 50%;
+  }
+  .quote-block img {
+    display: none;
+  }
+  .quote-block p {
+    width: 100%;
+  }
+  .download-block {
+    width: 50%;
+    right: 0px;
+  }
+}
