@@ -30,7 +30,7 @@
 }
 
 .header-line {
-  width: 1400px;
+  max-width: 1400px;
   display: flex;
   justify-content: space-between;
   margin: 0 auto 15px auto;
@@ -239,6 +239,7 @@ strong {
 .security-section {
   width: 100%;
   padding: 85px 0 100px 0;
+  position: relative;
 }
 
 .security-section__line {
@@ -251,7 +252,6 @@ strong {
 .column-description {
   width: 430px;
   padding: 0 48px;
-  position: relative;
 }
 
 .column-description__title {
@@ -284,6 +284,10 @@ strong {
   letter-spacing: 1px;
   line-height: 20px;
   margin-top: 33px;
+}
+
+.column-description:first-of-type{
+  position: relative;
 }
 
 /***************************************blog-section***************************************/
@@ -338,6 +342,7 @@ strong {
 /********************************about-section*******************************/
 
 .about-section {
+  width: 100%;
   padding-bottom: 170px;
 }
 
@@ -491,6 +496,7 @@ strong {
 
 /*****************************************footer***********************************/
 .footer {
+  width: 100%;
   margin: 0 auto;
   padding-top: 62px;
 }

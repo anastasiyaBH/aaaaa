@@ -66,4 +66,23 @@
     width: 70%;
     right: 0;
   }
+
+  .labels-block {
+    display: none;
+  }
+
+  .footer-column {
+    display: none;
+  }
+
+  .informatrion-block {
+    padding: 0;
+  }
+
+  .last-block {
+    width: 95%;
+    right: 0;
+    height: 0;
+    padding-top: 40px;
+  }
 }

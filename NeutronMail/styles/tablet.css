@@ -1,11 +1,9 @@
 @media (min-width: 800px) and (max-width: 1200px){
   .header-line {
-    min-width: 780px;
-    max-width: 1180px;
+    max-width: 800px;
     flex-wrap: wrap;
     justify-content: flex-start;
     flex-direction: column;
-    padding-left: 50px;
   }
   .logo {
     margin-bottom: 10px;
@@ -42,25 +40,4 @@
     padding-top: 60px;
   }
 
-}
-
-@media (min-width: 540px) and (max-width: 800px){
-  .labels-block {
-    display: none;
-  }
-
-  .footer-column {
-    display: none;
-  }
-
-  .informatrion-block {
-    padding: 0;
-  }
-
-  .last-block {
-    width: 95%;
-    right: 0;
-    height: 0;
-    padding-top: 40px;
-  }
 }
