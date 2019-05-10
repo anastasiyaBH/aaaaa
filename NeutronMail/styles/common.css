@@ -82,14 +82,17 @@
   text-align: left;
 }
 
-.languages__line--item-link:hover, .navigation__line--item-link:hover {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
 .autorization-link {
   color: rgba(69, 69, 69, 255);
   text-align: left;
+}
+
+.languages__line--item-link:hover,
+.navigation__line--item-link:hover,
+.autorization-link:hover,
+.footer-column__link:hover {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .registration-button {
@@ -99,6 +102,22 @@
   border-radius: 80px;
   color: #fff;
   text-align: center;
+}
+
+.registration-button:hover,
+.button-line__button-create:hover,
+.button-line__button-download:hover,
+.download-button:hover,
+.button-line__button-donate:hover{
+  cursor: pointer;
+}
+
+.registration-button:active,
+.button-line__button-create:active,
+.button-line__button-download:active,
+.download-button:active,
+.button-line__button-donate:active{
+  box-shadow: -2px 4px 8px #666;
 }
 
 .autorization-link, .registration-button {
@@ -452,6 +471,7 @@ strong {
   width: 169px;
   height: 59px;
   border-radius: 80px;
+  font-family: "TitilliumWeb-Bold";
   font-size: 16px;
   color: #fff;
   letter-spacing: 1px;
@@ -462,6 +482,10 @@ strong {
 .support-section .button-line__button-create {
   margin: auto 21px auto 0;
   box-shadow: 0 8px 18px #888cb2;
+}
+
+.support-section .button-line__button-create:active{
+  box-shadow: -2px 4px 8px #666;
 }
 
 
