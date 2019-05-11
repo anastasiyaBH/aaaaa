@@ -1,0 +1,15 @@
+{
+  "name": "youtube-client",
+  "version": "0.0.1",
+  "description": "Web app to view the information about youtube clips on user request",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "Anastasiya But-Husaim",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2"
+  }
+}
