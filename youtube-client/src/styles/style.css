@@ -1,0 +1,6 @@
+@import url("./main.css");
+
+@font-face {
+  font-family: "Noto Serif Regular";
+  src: url("../assets/fonts/NotoSerif-Regular.ttf");
+}
