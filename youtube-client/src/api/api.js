@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 const KEY = 'AIzaSyCTWC75i70moJLzyNh3tt4jzCljZcRkU8Y';
-const MAX_RESULTS = 4;
+const MAX_RESULTS = 16;
 
 export default function loadClipsInform(query) {
   const url = `https://www.googleapis.com/youtube/v3/search?key=${KEY}&type=video&part=snippet&maxResults=${MAX_RESULTS}&fields=nextPageToken,items(id(videoId))&q=${query}`;

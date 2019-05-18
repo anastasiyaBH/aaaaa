@@ -26,7 +26,7 @@ export default class App {
               clips.push(clip);
             });
             slider.addClips(clips);
-            console.log(arr);
+            slider.setSlider();
           });
       }
     });

@@ -1,7 +1,8 @@
 export default class SliderDot {
-  constructor() {
+  constructor(num) {
     this.sliderDot = document.createElement('button');
     this.sliderDot.className = 'slider__slider-dot';
+    this.number = num;
   }
 
   getSliderDot() {
