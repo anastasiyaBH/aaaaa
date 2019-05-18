@@ -2,4 +2,4 @@ import App from './src/App';
 
 const app = new App();
 
-app.start(5);
+app.start();

@@ -1,23 +1,31 @@
+/* eslint-disable no-console */
 import SearchBox from './containers/SearchBox';
+import Slider from './containers/Slider';
+import loadClipInform from './api/api';
+// import Clip from './components/Clip';
 
 export default class App {
-  constructor(url) {
-    this.url = url;
+  constructor() {
+    this.main = document.createElement('main');
+    this.main.className = 'main';
+    document.body.appendChild(this.main);
   }
 
   start() {
-    this.url = 0;
+    const searchBox = new SearchBox().getSearchBox();
+    this.main.appendChild(searchBox);
+    const slider = new Slider();
 
-    // создание main
-    const main = document.createElement('main');
-    main.className = 'main';
-    main.innerHTML = 'main';
-    document.body.appendChild(main);
+    searchBox.addEventListener('keypress', (event) => {
+      if (event.key === 'Enter') {
+        // const clips = [];
+        loadClipInform(searchBox.querySelector('.search-box__input').value)
+          .then((arr) => {
+            console.log(arr);
+          });
+      }
+    });
 
-    // добавление поля поиска
-    const searchBox = new SearchBox(this.url);
-    main.appendChild(searchBox.getSearchBox());
-    // eslint-disable-next-line no-console
-    console.log('Hello');
+    this.main.appendChild(slider.getSlider());
   }
 }
