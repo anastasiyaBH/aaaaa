@@ -2,7 +2,7 @@
 import SearchBox from './containers/SearchBox';
 import Slider from './containers/Slider';
 import loadClipInform from './api/api';
-// import Clip from './components/Clip';
+import Clip from './components/Clip';
 
 export default class App {
   constructor() {
@@ -18,9 +18,14 @@ export default class App {
 
     searchBox.addEventListener('keypress', (event) => {
       if (event.key === 'Enter') {
-        // const clips = [];
+        const clips = [];
         loadClipInform(searchBox.querySelector('.search-box__input').value)
           .then((arr) => {
+            arr.forEach((e) => {
+              const clip = new Clip(e);
+              clips.push(clip);
+            });
+            slider.addClips(clips);
             console.log(arr);
           });
       }
