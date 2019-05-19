@@ -16,6 +16,10 @@ export default class Slider {
     this.dotsLine.className = 'dots-line';
 
     this.slider.appendChild(this.dotsLine);
+
+    this.NUMBER_OF_CARDS = 4;
+
+    this.setWindowComtrole();
   }
 
   getSlider() {
@@ -33,14 +37,15 @@ export default class Slider {
     old.innerHTML = '';
     this.dotsLine.innerHTML = '';
 
-    for (let i = 0; i < Math.ceil(this.arrayClips.length / 4); i += 1) {
+    for (let i = 0; i < Math.ceil(this.arrayClips.length / this.NUMBER_OF_CARDS); i += 1) {
       const dot = new SliderDot().getSliderDot();
       dot.innerHTML = `${i + 1}`;
       this.dotsLine.appendChild(dot);
       const slide = new ClipsLine().getClipsLine();
 
       if (!i) {
-        for (let j = i * 4; j < (i * 4 + 4) && j < this.arrayClips.length; j += 1) {
+        for (let j = i * this.NUMBER_OF_CARDS; j < (i * this.NUMBER_OF_CARDS + this.NUMBER_OF_CARDS)
+          && j < this.arrayClips.length; j += 1) {
           slide.appendChild(this.arrayClips[j].getClip());
           dot.classList.add('dot_active');
         }
@@ -52,11 +57,36 @@ export default class Slider {
         this.slider.querySelector('.dot_active').classList.remove('dot_active');
         dot.classList.add('dot_active');
         const oldSlide = this.slider.querySelector('.clips-line');
-        for (let j = i * 4; j < (i * 4 + 4) && j < this.arrayClips.length; j += 1) {
+        for (let j = i * this.NUMBER_OF_CARDS; j < (i * this.NUMBER_OF_CARDS + this.NUMBER_OF_CARDS)
+          && j < this.arrayClips.length; j += 1) {
           slide.appendChild(this.arrayClips[j].getClip());
         }
         this.slider.replaceChild(slide, oldSlide);
       });
     }
+  }
+
+  setWindowComtrole() {
+    window.addEventListener('resize', () => {
+      const oldNumberOfCards = this.NUMBER_OF_CARDS;
+
+      if (window.innerWidth > 0) {
+        this.NUMBER_OF_CARDS = 1;
+      }
+
+      if (window.innerWidth > 700) {
+        this.NUMBER_OF_CARDS = 2;
+      }
+
+      if (window.innerWidth > 900) {
+        this.NUMBER_OF_CARDS = 3;
+      }
+
+      if (window.innerWidth > 1200) {
+        this.NUMBER_OF_CARDS = 4;
+      }
+
+      if (oldNumberOfCards !== this.NUMBER_OF_CARDS) this.setSlider();
+    });
   }
 }
