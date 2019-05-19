@@ -11,7 +11,7 @@ export default class Clip {
     this.clip.innerHTML = `<div class="clip__image">
     <img src=${this.clipInform.imgURL}>
     <div class="clip__background-title">
-        <a href="" class="clip__title">${this.clipInform.title}</a>
+        <a href="${this.clipInform.url}" target="_blank" class="clip__title">${this.clipInform.title}</a>
     </div>
   </div>
   <ul class="description-list">
