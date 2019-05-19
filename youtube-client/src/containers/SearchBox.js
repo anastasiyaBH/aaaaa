@@ -7,7 +7,7 @@ export default class SearchBox {
 
     const inpt = new Input().getInput();
     this.searchBox.appendChild(inpt);
-    this.searchBox.innerHTML += '<button class="search-box__search-button" type="submit" value=""><i class="fas fa-search"></i></input>';
+    this.searchBox.innerHTML += '<div class="search-box__search-button"><i class="fas fa-search"></i></div>';
   }
 
   getSearchBox() {

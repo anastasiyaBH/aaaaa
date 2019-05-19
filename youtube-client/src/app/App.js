@@ -1,9 +1,8 @@
-/* eslint-disable no-console */
-import SearchBox from './containers/SearchBox';
-import Slider from './containers/Slider';
-import loadClipInform from './api/api';
-import Clip from './components/Clip';
-import LoadImage from './components/LoadImage';
+import SearchBox from '../containers/SearchBox';
+import Slider from '../containers/Slider';
+import loadClipInform from '../api/api';
+import Clip from '../components/Clip';
+import LoadImage from '../components/LoadImage';
 
 export default class App {
   constructor() {
@@ -22,6 +21,8 @@ export default class App {
     searchBox.addEventListener('keypress', (event) => {
       if (event.key === 'Enter') {
         const slider = new Slider();
+        slider.getNumberOfCards();
+        slider.setWindowComtrole();
         const clips = [];
         loadClipInform(searchBox.querySelector('.search-box__input').value)
           .then((arr) => {
